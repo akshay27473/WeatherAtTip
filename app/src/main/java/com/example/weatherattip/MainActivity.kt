@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
 
     private val apiKey="f70ca239bf30695349b25a9bb3361c69"
 
-    // private var mInterstitialAd: InterstitialAd?=null
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,13 +53,7 @@ class MainActivity : AppCompatActivity() {
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        // MobileAds.initialize(this)
 
-        // val adRequest= AdRequest.Builder().build()
-
-        // binding.bannerAds.loadAd(adRequest)
-
-        //  loadAds()
 
         fusedLocationProvider= LocationServices.getFusedLocationProviderClient(this)
 
@@ -121,18 +115,7 @@ class MainActivity : AppCompatActivity() {
                 override fun onResponse(call: Call<WeatherModel>, response: Response<WeatherModel>) {
                     if (response.isSuccessful){
 
-                        // loadAds()
 
-                        /* if (mInterstitialAd!=null){
-
-                             mInterstitialAd!!.show(this@MainActivity)
-
-
-                         }
-                         else{
-
-
-                         } */
 
 
 
@@ -166,23 +149,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-/*    private fun loadAds(){
 
-        val adRequest= AdRequest.Builder().build()
-
-        InterstitialAd.load(this,
-            "ca-app-pub-3940256099942544/1033173712",
-            adRequest,object :
-            InterstitialAdLoadCallback(){
-            override fun onAdFailedToLoad(p0: LoadAdError) {
-                mInterstitialAd=null
-            }
-            override fun onAdLoaded(p0: InterstitialAd) {
-                mInterstitialAd=p0
-            }
-        })
-    }
-*/
 
 
 
